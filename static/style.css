@@ -1,22 +1,21 @@
 body {
-	text-align: center;
+	background-color: #eff1f2;
+	width: 800px;
+	margin: 0 auto;
 }
 
-.centered {
-	margin: auto;
-	width: 20%;
+form {
+	margin: 20px 0;
 }
 
-.thick-border {
-	border: 3px solid black;
-	border-collapse: collapse;
+table {
+	font-size: 85%;
 }
 
-th, td {
-	border: 1px solid black;
-	border-collapse: collapse;
+th {
+	text-align: left;
 }
-.alert {
-    border: 1px solid red;
-    font-weight: bold;
+
+tr {
+	border-bottom: 1pt solid #ddd;
 }

@@ -1,23 +1,20 @@
 <!doctype html>
 
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 
 <h1>Compare the Weather of 2 Cities: </h1>
                                
-<form action="/" method="POST">
-    <label>Enter city #1: </label>
-    <input type="text" name="city1" value="{{ request.form['city1'] }}" />
-    <label>Enter city #2: </label>
-    <input type="text" name="city2" value="{{ request.form['city2'] }}" />
-	<button type="submit">Go</button>
+<form class="pure-form" action="/" method="POST">
+    <input type="text" name="city1" value="{{ request.form['city1'] }}" placeholder="Enter city 1"/>
+    <input type="text" name="city2" value="{{ request.form['city2'] }}" placeholder="Enter city 2"/>
+	<button type="submit" class="pure-button pure-button-primary">Show Weather</button>
 </form>
-
-<br><hr><br>
 
 {% if error %}
     <p class='alert'>{{ error }}</p>
 {% elif data %}
-    <table class="centered thick-border">
+    <table class="pure-table">
         <tr>
             <th>City</th>
             <th>Description</th>
